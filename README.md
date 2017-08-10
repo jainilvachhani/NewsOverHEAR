@@ -15,20 +15,20 @@ FrameWork : Django
 API: ResponsiveVoice.js Aanyang BeautifulSoap.py
 
 How to run:
-# Create 'overhear' named database on your mysql server
+Create 'overhear' named database on your mysql server
 
-# set you mysql server's credentials in settings.py file
+set you mysql server's credentials in settings.py file
 
-# open terminal at project's main folder where manage.py file exist
+open terminal at project's main folder where manage.py file exist
 
-# make migrations of the database using following command
-python manage.py makemigrations 
+make migrations of the database using following command
+>python manage.py makemigrations 
 
-# migrate it to your server using,
-python manage.py migrate
+migrate it to your server using,
+>python manage.py migrate
 
-# now start Django server
-python manage.py runserver
+now start Django server
+>python manage.py runserver
 
-# In browser, type following IP 
-127.0.0.1:8000/hear1/index
+In browser, type following IP 
+>127.0.0.1:8000/hear1/index
