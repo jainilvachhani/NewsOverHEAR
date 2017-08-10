@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script src='https://code.responsivevoice.org/responsivevoice.js'></script> -->
+	<title>
+		News OverHEAR
+	</title>
+</head>
+<body>
+	<h1>
+		News OverHEAR
+	</h1>
+
+	{% for title,disp,img in news_list %}
+	<p><h4>{{title}} </h4></p>
+	<p><h6>{{disp}} </h6></p>
+	{{img}}
+	
+	<img src="{{img}}?resize=200px:*"/>
+    
+    {% endfor %}
+
+</body>
+</html>

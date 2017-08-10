@@ -1,0 +1,257 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>News OverHear</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}" />
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js">
+</script>
+
+<!-- <script type="text/javascript">
+window.onload = function(){
+  var d = new Date();
+    if(d.getHours()==1)
+    {
+      window.location="http://127.0.0.1:8000/hear1/index/bus";
+    }
+}  
+</script> -->
+
+
+<script type="text/javascript">
+    function alert3pm() {
+      window.location="http://127.0.0.1:8000/hear1/email";
+    }
+
+    setTimeout(alert3pm, 3600*1000);
+</script>
+
+
+<script>
+  window.onload = function(){
+    if (annyang) {
+        var commands1 = {
+            'sports': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/sports"; 
+            }
+        };
+        var commands2 = {
+            'business': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/business"; 
+            }
+        };
+        var commands3 = {
+            'entertainment': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/entertainment"; 
+            }
+        };
+        var commands4 = {
+            'technology': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/technology"; 
+            }
+        };
+        var commands5 = {
+            'startup': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/startup"; 
+            }
+        };
+        var commands6 = {
+            'politics': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/politics"; 
+            }
+        };
+        var commands7 = {
+            'home': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/index/"; 
+            }
+        };
+
+	var commands8 = {
+            'tutorials': function() {
+               
+               window.location="http://127.0.0.1:8000/hear1/about/"; 
+            }
+        };
+
+
+        annyang.addCommands(commands1);
+        annyang.addCommands(commands2);
+        annyang.addCommands(commands3);
+        annyang.addCommands(commands4);
+        annyang.addCommands(commands5);
+        annyang.addCommands(commands6);
+        annyang.addCommands(commands7);
+        annyang.addCommands(commands8);
+        annyang.start(); 
+    }
+}
+
+</script>
+
+<script>
+var x=0;
+</script>
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="ie.css" /><![endif]-->
+</head>
+<body>
+<!-- BEGIN navigation -->
+<div id="navigation">
+  <div class="wrapper">
+    <ul>
+      <li><a href="/hear1/index">Home</a></li>
+      <li><a href="/hear1/about">Tutorials</a></li>
+      <li><a href="/hear1/contact">Contact Page</a></li>
+    </ul>
+    <form method="post" action="">{% csrf_token %}
+      <button type="submit">Search</button>
+      <input type="text" name="s" id="s" />
+    </form>
+  </div>
+</div>
+<!-- END navigation -->
+<!-- BEGIN wrapper -->
+<div class="wrapper">
+  <!-- BEGIN header -->
+  <div id="header">
+    <h1><a href="/hear1/index">News OverHear</a></h1>
+    <div class="ad468x60"><a href="/hear1/index"><img src="{% static "images/2.png" %}" alt="" /></a></div>
+  </div>
+  <!-- END header -->
+  <!-- BEGIN body -->
+  <div id="body">
+    <!-- BEGIN content -->
+    <div id="content">
+
+   
+      <div class="posts">
+        <!-- begin post -->
+        <div class="post">
+          
+          <br>
+          <h2>A - Z</h2>
+          <h3>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h3>
+	<script>var AZ = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";</script>
+          <div class="details"><input class="details" onclick='if(!responsiveVoice.isPlaying()){responsiveVoice.speak( AZ , "UK English Male", {rate: 0.1});x=1;}else if(x==1){responsiveVoice.pause();x=2;}else if(x==2){responsiveVoice.resume();x=1;};' type='button' value='🔊 Play / Stop' /> </div>
+          <br>          
+
+        </div>
+        <!-- end post -->
+        </div>
+
+
+        <!-- end post -->
+        <div class="break"></div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN sidebar -->
+    <div id="sidebar">
+      <!-- begin Advertisement -->
+      <div class="ads"> <a href="#"><img src="{% static "images/1.png" %}" alt="" /></a> <a href="#"><img src="{% static "images/1.png" %}" alt="" /></a> <a href="#"><img src="{% static "images/1.png" %}" alt="" /></a> <a href="#"><img src="{% static "images/1.png" %}" alt="" /></a> </div>
+      <!-- end Advertisement -->
+
+
+      <!-- begin subscribe -->
+      <h2>Subscribe Here</h2>
+      <form class="subscribe" action="" method="post">{% csrf_token %}
+        <a href="#">Subscribe via RSS Feed or</a>
+        <input type="text" name="email" placeholder="Enter E-mail Here.."  />
+        <button type="submit">Submit</button>
+      </form>
+      <!-- end subscribe --> 
+
+
+      <!-- begin popular posts -->
+      <!-- <h2>Popular Posts</h2>
+      <ul>
+        <li><a href="#">Make Money Online Creating Websites</a></li>
+        <li><a href="#">Top 100 Internet Marketing Tips</a></li>
+        <li><a href="#">Tutorial: How to add Videos in your Post</a></li>
+        <li><a href="#">Sample Post Unordered List</a></li>
+        <li><a href="#">Sample Post Blockquote</a></li>
+      </ul> -->
+      <!-- end popular posts -->
+      <!-- begin tags -->
+      <!-- <h2>Tags</h2>
+      <div class="tags"> </div> -->
+      <!-- end tags -->
+      <!-- BEGIN left -->
+      <div class="sidebar">
+        <!-- begin categories -->
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="http://127.0.0.1:8000/hear1/index/sports">Sports</a></li>
+          <li><a href="http://127.0.0.1:8000/hear1/index/business">Business</a></li>
+          <li><a href="http://127.0.0.1:8000/hear1/index/entertainment">Entertainment</a></li>
+          <li><a href="http://127.0.0.1:8000/hear1/index/technology">Technology</a></li>
+          <li><a href="http://127.0.0.1:8000/hear1/index/politics">Politics</a></li>
+          <li><a href="http://127.0.0.1:8000/hear1/index/startup">Start-Ups</a></li>
+        </ul>
+        </div>
+        <!-- end categories -->
+        <!-- begin pages -->
+   
+      <!-- END left -->
+      <!-- BEGIN right -->
+
+
+      <!-- <div class="r"> -->
+        <!-- begin archives -->
+        <!-- <h2>Archives</h2>
+        <ul>
+          <li><a href="#">August 2008</a></li>
+          <li><a href="#">July 2008</a></li>
+          <li><a href="#">June 2008</a></li>
+          <li><a href="#">May 2008</a></li>
+          <li><a href="#">April 2008</a></li>
+          <li><a href="#">March 2008</a></li>
+        </ul> -->
+        <!-- end archives -->
+        <!-- begin blogroll -->
+        <!-- <h2>Blogroll</h2>
+        <ul>
+          <li><a href="#">Carlos</a></li>
+          <li><a href="#">Digital Point Forum</a></li>
+          <li><a href="#">Eric's Photo Gallery</a></li>
+          <li><a href="#">Fashion Trends</a></li>
+          <li><a href="#">Google Scoreboard</a></li>
+          <li><a href="#">Marketing Forum</a></li>
+        </ul> -->
+        <!-- end blogroll -->
+        <!-- begin meta -->
+        <!-- <h2>Meta</h2>
+        <ul>
+          <li><a href="#">Login</a></li>
+        </ul> -->
+        <!-- end meta -->
+      <!-- </div> -->
+      <!-- END right -->
+
+
+    </div>
+    <!-- END sidebar -->
+  </div>
+  <!-- END body -->
+  <div class="break"></div>
+</div>
+<!-- END wrapper -->
+<!-- BEGIN footer -->
+<div id="footer">
+  <div class="wrapper">
+    <p class="r">Copyright &copy; 2017 - <a href="http://127.0.0.1:8000/hear1/index">News OverHEAR</a> &middot; All Rights Reserved</p>
+  </div>
+</div>
+<!-- END footer -->
+</body>
+</html>
