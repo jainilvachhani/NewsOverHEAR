@@ -1,4 +1,4 @@
-Created during [IEEE Impuslse 2017](https://ieee-ldce-impulse.hackerearth.com/) Hackathon. Won 1st prize.
+Created during IEEE Impuslse 2017 Hackathon. Won 1st prize.
 Team Name: Carpe_Diem
 Title : NewsOverHEAR
 
